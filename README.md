@@ -8,7 +8,7 @@ A Tensorflow implementation of Joseph Redmond and Ali farhadi's You Only Look On
 ![Detected](https://github.com/Chhaganlaal/YOLOv3/blob/master/result/det_person.jpg)
 
 ### Requirements
-- Tensorflow
+- Tensorflow-gpu
 - Numpy
 - OpenCV
 - Pandas
