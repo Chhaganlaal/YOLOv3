@@ -48,14 +48,9 @@ def arg_parser():
 def main():
     args = arg_parser()
 
-    scales = args.scales
-
-    images = args.images
-    batch_size = int(args.bs)
     confidence = float(args.confidence)
     nms_thresh = float(args.nms_thresh)
     in_dim = int(args.resolution)
-    start = 0
 
     num_classes = 80
     classes = load_classes('data/coco.names')
@@ -63,8 +58,6 @@ def main():
     model = net(args.configfile)
     model.load_weights(args.weightsfile)
     print("Network Loaded")
-
-    read_dir = time.time()
     
     cap = cv2.VideoCapture(0)
     if not cap.isOpened():
